@@ -1,0 +1,16 @@
+# SQLite version 3.x
+#   gem install sqlite3
+#
+#   Ensure the SQLite 3 gem is defined in your Gemfile
+#   gem 'sqlite3'
+#
+#Configuracion de conexion con base de datos PG
+development:
+  adapter: postgresql
+  enconding: unicode
+  database: db_foundations
+  pool: 5
+  username: postgres
+  password: admin
+  host: localhost
+

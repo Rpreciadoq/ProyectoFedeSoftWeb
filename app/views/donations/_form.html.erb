@@ -1,0 +1,28 @@
+
+<div style=width:80%;margin:0 auto; class="container" >
+
+
+<% name ||="Crear" %>
+<h1> <%=name%> Donacion </h1>
+
+
+<% @Donation.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+    <%end%>
+
+
+
+
+
+<%= form_for(@Donation) do |f| %>
+<%= f.number_field :cuenta, placeholder:"Numero de cuenta" %>
+<%= f.text_field :banco, placeholder:"Corporacion bancaria" %>
+<%= f.text_area :detalle, placeholder:"Información adicional a presentar" %>
+
+
+
+<%= f.submit "Guardar" %>
+
+    <%end%>
+
+    </div>

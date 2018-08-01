@@ -1,0 +1,28 @@
+<table class="striped">
+<thead>
+  <tr>
+      <th>Nombre del Evento</th>
+      <th>Lugar - Sitio</th>
+      <th>Fecha</th>
+      <th>Participantes o grupos de interes</th>
+      <th colspan="2" >Accion</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+  <% @Event.each do |event| %>
+    <td><%= event.nombre %></td>
+    <td><%= event.lugar %></td>
+    <td><%= event.fecha %></td>
+    <td><%= event.participantes %></td>
+    <td><%= link_to 'Editar', edit_event_path(event) %></td>
+    <td><%= link_to "Eliminar", event, method: :delete, data: { confirm: 'Esta seguro?' }%></td>
+
+
+    </tr>
+    <% end %>
+  
+  
+</tbody>
+</table>

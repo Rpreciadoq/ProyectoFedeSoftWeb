@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  lugar: MyText
+  fecha: 2018-07-22
+  participantes: MyText
+
+two:
+  nombre: MyString
+  lugar: MyText
+  fecha: 2018-07-22
+  participantes: MyText

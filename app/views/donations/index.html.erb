@@ -1,0 +1,24 @@
+<table class="striped">
+<thead>
+  <tr>
+      <th>Cuenta</th>
+      <th>Banco</th>
+      <th>Información adicional</th>
+      <th colspan="2" >Accion</th>
+  </tr>
+</thead>
+
+<tbody>
+  <tr>
+  <% @Donation.each do |donacion| %>
+    <td><%= donacion.cuenta %></td>
+    <td><%= donacion.banco %></td>
+    <td><%= donacion.detalle %></td>
+    <td><%= link_to 'Editar', edit_donation_path(donacion) %></td>
+    <td><%= link_to "Eliminar", donacion, method: :delete, data: { confirm: 'Esta seguro?' }%></td>
+    </tr>
+    <% end %>
+  
+  
+</tbody>
+</table>

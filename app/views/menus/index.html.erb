@@ -1,0 +1,24 @@
+
+<table class="striped">
+<thead>
+  <tr>
+      <th>Nombre menu</th>
+      <th>enlace</th>
+      <th colspan="2" >Accion</th>
+  </tr>
+</thead>
+
+
+<tbody>
+  <tr>
+  <% @Menu.each do |menu| %>
+    <td><%= menu.nombre %></td>
+    <td><%= menu.enlace %></td>
+    <td><%= link_to 'Editar', edit_menu_path(menu) %></td>
+    <td><%= link_to "Eliminar", menu, method: :delete, data: { confirm: 'Esta seguro?' }%></td>
+    </tr>
+    <% end %>
+  
+  
+</tbody>
+</table>

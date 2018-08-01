@@ -1,0 +1,24 @@
+<div style=width:80%;margin:0 auto; class="container" >
+
+
+<% name ||="Crear" %>
+<h1> <%=name%> Eventos </h1>
+
+
+
+<% @Event.errors.full_messages.each do |error| %>
+    <p><%= error %></p>
+    <%end%>
+
+
+<%= form_for(@Event) do |f| %>
+<%= f.text_field :nombre, placeholder:"Nombre del Evento" %>
+<%= f.text_field :lugar, placeholder:"Sitio o Lugar del evento" %>
+<%= f.date_field :fecha, placeholder:"Fecha del Evento" %>
+<%= f.text_area :participantes, placeholder:"Participantes, grupos de interes" %>
+
+<%= f.submit "Guardar" %>
+
+    <%end%>
+
+    </div>
