@@ -1,3 +1,5 @@
+
+
 <table class="striped">
 <thead>
   <tr>
@@ -32,9 +34,29 @@
     </div>
     <div class="card-action">
       <a href="#">Ir a sitio web de la fundacion</a>
-      <a href="#">Ver más</a>
+      <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+      
     </div>
   </div>
 </div>
 
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <h4><%= fundacion.nombre %></h4>
+    <p><%= fundacion.resumen %></p>
+  </div>
+  <div class="modal-footer">
+    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+  </div>
+</div>
 <% end %>
+
+
+
+
+
+
+
+  <script src="../assets/welcome.js"></script>
+

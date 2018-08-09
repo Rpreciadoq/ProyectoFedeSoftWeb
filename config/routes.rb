@@ -8,4 +8,5 @@ Rails.application.routes.draw do
   resources :donations
   resources :events
   resources :menus
+  resources :welcome
 end
